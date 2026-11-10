@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Nikkah of Muhammad Shoaib Juma & Zubia Khalid</title>
-<meta name="description" content="You are cordially invited to the Nikkah of Muhammad Shoaib Juma & Zubia Khalid — Friday, 08 January 2027, After Namaz-e-Asar, Masjid-e-Quba, Karachi.">
+<meta name="description" content="You are cordially invited to the Nikkah of Muhammad Shoaib Juma & Zubia Khalid — Friday, 08 January 2027, After Namaz-e-Maghrib, Masjid-e-Quba, Karachi.">
 <meta property="og:title" content="The Nikkah of Muhammad Shoaib Juma & Zubia Khalid">
-<meta property="og:description" content="Friday, 08 January 2027 • After Namaz-e-Asar • Masjid-e-Quba, Gulshan-e-Iqbal, Karachi">
+<meta property="og:description" content="Friday, 08 January 2027 • After Namaz-e-Maghrib • Masjid-e-Quba, Gulshan-e-Iqbal, Karachi">
 <meta name="theme-color" content="#f7f1e6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,8 +103,17 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 .scratch .under{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px}
 .scratch .under .dd{font-family:'Cinzel',serif;font-size:2.6rem;color:var(--goldDark);line-height:1.05}
 .scratch .under .mm{font-family:'Cinzel',serif;letter-spacing:.25em;font-size:.9rem}
-.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab;transition:opacity 1s}
-.scratch canvas.done{opacity:0;pointer-events:none}
+.cover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;
+  background:linear-gradient(135deg,#8a6a2f,#d2ad62 35%,#f1dca6 50%,#c9a35a 65%,#7a5c25);color:#3a2a12;
+  user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:none;transition:opacity 1s,transform 1s}
+.cover::before{content:"";position:absolute;inset:9px;border:1px solid rgba(255,248,230,.7);border-radius:8px;pointer-events:none}
+.cover .ringwrap{position:relative;width:74px;height:74px;margin-bottom:8px}
+.cover svg{width:74px;height:74px;transform:rotate(-90deg)}
+.cover .fp{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:#3a2a12}
+.cover .t1{font-family:'Cinzel',serif;letter-spacing:.22em;font-size:.72rem;font-weight:600}
+.cover .t2{font-style:italic;font-size:.95rem;margin-top:2px}
+.cover.pressing{transform:scale(.97)}
+.cover.done{opacity:0;transform:scale(1.08);pointer-events:none}
 .small{font-size:.95rem;font-style:italic}
 
 /* ---------- COUNTDOWN ---------- */
@@ -255,7 +264,7 @@ footer{text-align:center;font-size:.75rem;padding:0 0 30px}
     <span class="big">08</span>
     <span class="caps side">Jan 2027</span>
   </div>
-  <p class="caps reveal d4" style="margin-top:14px">After Namaz-e-Asar</p>
+  <p class="caps reveal d4" style="margin-top:14px">After Namaz-e-Maghrib</p>
   <div class="scroll-cue caps reveal d4">Scroll<span></span></div>
 </section>
 
@@ -272,6 +281,7 @@ footer{text-align:center;font-size:.75rem;padding:0 0 30px}
     <p class="so">S/O Muhammad Junaid Juma</p>
     <p style="margin:6px 0 4px">with</p>
     <p class="groom goldtext" style="margin-top:0">Zubia Khalid</p>
+    <p class="so">D/O Syed Khalid Mansoor</p>
     <svg class="divider"><use href="#divider"/></svg>
     <p>Your gracious presence and prayers will make this blessed occasion even more memorable.</p>
     <p class="small" style="margin-top:18px">With warm regards,</p>
@@ -295,15 +305,23 @@ footer{text-align:center;font-size:.75rem;padding:0 0 30px}
 <!-- ================= SAVE THE DATE ================= -->
 <section id="save">
   <p class="caps gold reveal">Save the Date</p>
-  <p class="small reveal d1">Scratch the golden card to reveal</p>
+  <p class="small reveal d1">Press &amp; hold the golden card to reveal</p>
   <div class="scratch reveal d2" id="scratch">
     <div class="under">
       <span class="caps">Friday</span>
       <span class="dd">08 . 01 . 2027</span>
       <span class="mm" style="margin-top:6px">Nikkah Ceremony</span>
-      <span class="small" style="margin-top:2px">After Namaz-e-Asar</span>
+      <span class="small" style="margin-top:2px">After Namaz-e-Maghrib</span>
     </div>
-    <canvas id="scratchCanvas"></canvas>
+    <div class="cover" id="cover">
+      <div class="ringwrap">
+        <svg viewBox="0 0 74 74"><circle cx="37" cy="37" r="32" fill="none" stroke="rgba(58,42,18,.25)" stroke-width="3"/>
+        <circle id="prog" cx="37" cy="37" r="32" fill="none" stroke="#3a2a12" stroke-width="3" stroke-linecap="round" stroke-dasharray="201" stroke-dashoffset="201"/></svg>
+        <span class="fp">&#10022;</span>
+      </div>
+      <span class="t1">SAVE THE DATE</span>
+      <span class="t2">press &amp; hold</span>
+    </div>
   </div>
 </section>
 
@@ -349,7 +367,7 @@ footer{text-align:center;font-size:.75rem;padding:0 0 30px}
   <svg class="divider reveal"><use href="#divider"/></svg>
   <p class="caps gold reveal">The Nikkah Ceremony</p>
   <p class="vline reveal d1" style="font-size:1.15rem">Friday, 08 January 2027</p>
-  <p class="vline reveal d1">After Namaz-e-Asar</p>
+  <p class="vline reveal d1">After Namaz-e-Maghrib</p>
   <p class="venue-name reveal d2">Masjid-e-Quba</p>
   <p class="vline reveal d2">Gulshan-e-Iqbal, Block I, Karachi</p>
   <a class="btn reveal d3" target="_blank" rel="noopener"
@@ -374,8 +392,8 @@ footer{text-align:center;font-size:.75rem;padding:0 0 30px}
 
 <script>
 /* ======= EDIT HERE IF NEEDED ======= */
-// Nikah date & time (Pakistan time). Asr in Karachi in January is roughly 3:45 PM — timer counts to 4:00 PM.
-const EVENT = new Date('2027-01-08T16:00:00+05:00');
+// Nikah date & time (Pakistan time). Maghrib in Karachi on 8 Jan is around 6:00 PM — timer counts to 6:15 PM.
+const EVENT = new Date('2027-01-08T18:15:00+05:00');
 /* =================================== */
 
 const $ = s => document.querySelector(s);
@@ -428,41 +446,22 @@ function tick(){
 }
 tick(); setInterval(tick,1000);
 
-// ---------- Scratch card ----------
+// ---------- Press & hold reveal ----------
 (function(){
-  const c = $('#scratchCanvas'), wrap = $('#scratch');
-  const ctx = c.getContext('2d');
-  let done = false, drawing = false;
-  function paint(){
-    const r = wrap.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
-    c.width = r.width*dpr; c.height = r.height*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
-    const w=r.width,h=r.height;
-    const gr = ctx.createLinearGradient(0,0,w,h);
-    gr.addColorStop(0,'#a8823e'); gr.addColorStop(.35,'#e4c789'); gr.addColorStop(.5,'#f6e7bd'); gr.addColorStop(.65,'#d2ad62'); gr.addColorStop(1,'#8a6a2f');
-    ctx.fillStyle = gr; ctx.fillRect(0,0,w,h);
-    for(let i=0;i<900;i++){ ctx.fillStyle=`rgba(255,255,255,${Math.random()*.25})`; ctx.fillRect(Math.random()*w,Math.random()*h,1.2,1.2); }
-    ctx.strokeStyle='rgba(255,250,235,.7)'; ctx.lineWidth=1; ctx.strokeRect(9,9,w-18,h-18);
-    ctx.fillStyle='rgba(90,70,40,.85)'; ctx.textAlign='center';
-    ctx.font='500 13px Cinzel, serif'; ctx.fillText('S A V E   T H E   D A T E', w/2, h/2-8);
-    ctx.font='italic 16px "Cormorant Garamond", serif'; ctx.fillText('scratch here ✦', w/2, h/2+18);
+  const cover=$('#cover'), prog=$('#prog'), wrap=$('#scratch'), C=201, DUR=1600;
+  let p=0, holding=false, done=false, last=0, running=false;
+  function frame(t){
+    const dt=last? t-last:16; last=t;
+    p += (holding? dt/DUR : -dt/500); p=Math.max(0,Math.min(1,p));
+    prog.style.strokeDashoffset = C*(1-p);
+    if(p>=1 && !done){ done=true; running=false; cover.classList.add('done'); burst(wrap); if(navigator.vibrate) navigator.vibrate(40); return; }
+    if(holding || p>0) requestAnimationFrame(frame); else { last=0; running=false; }
   }
-  document.fonts ? document.fonts.ready.then(paint) : paint();
-  function pos(e){ const r=c.getBoundingClientRect(); const p=e.touches?e.touches[0]:e; return [p.clientX-r.left,p.clientY-r.top]; }
-  function scratch(e){
-    if(!drawing||done) return; e.preventDefault();
-    const [x,y]=pos(e);
-    ctx.globalCompositeOperation='destination-out';
-    ctx.beginPath(); ctx.arc(x,y,22,0,Math.PI*2); ctx.fill();
-    ctx.globalCompositeOperation='source-over';
-  }
-  function check(){
-    const d = ctx.getImageData(0,0,c.width,c.height).data; let clear=0;
-    for(let i=3;i<d.length;i+=64) if(d[i]===0) clear++;
-    if(clear/(d.length/64) > .5){ done=true; c.classList.add('done'); burst(wrap); }
-  }
-  ['mousedown','touchstart'].forEach(ev=>c.addEventListener(ev,e=>{drawing=true;scratch(e)},{passive:false}));
-  ['mousemove','touchmove'].forEach(ev=>c.addEventListener(ev,scratch,{passive:false}));
-  ['mouseup','mouseleave','touchend'].forEach(ev=>c.addEventListener(ev,()=>{ if(drawing){drawing=false; if(!done) check();} }));
+  function down(e){ if(done) return; e.preventDefault(); holding=true; cover.classList.add('pressing'); if(!running){ running=true; last=0; requestAnimationFrame(frame); } }
+  function up(){ holding=false; cover.classList.remove('pressing'); }
+  cover.addEventListener('pointerdown',down);
+  ['pointerup','pointerleave','pointercancel'].forEach(ev=>cover.addEventListener(ev,up));
+  cover.addEventListener('contextmenu',e=>e.preventDefault());
 })();
 
 // ---------- Gold particles ----------
