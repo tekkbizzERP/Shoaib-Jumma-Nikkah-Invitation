@@ -13,20 +13,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ivory:#fbf7ef; --cream:#f4ecdc; --beige:#e9dcc3; --gold:#b8914a; --gold2:#d9b874; --goldDark:#8a6a2f; --ink:#5a4628;
+  --ivory:#f5ecdc; --cream:#eadbbf; --beige:#dcc7a0; --gold:#9a7330; --gold2:#c9a35a; --goldDark:#6b4e1c; --ink:#3a2a12;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--ivory);color:var(--ink);font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{background:#e7d8bb;color:var(--ink);font-weight:500;font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body.locked{overflow:hidden;height:100vh}
 .wrap{max-width:520px;margin:0 auto;position:relative;background:
   radial-gradient(ellipse at top,rgba(217,184,116,.10),transparent 60%),
   linear-gradient(var(--ivory),var(--cream));box-shadow:0 0 60px rgba(138,106,47,.12)}
 .ar{font-family:'Amiri',serif;direction:rtl}
 .script{font-family:'Great Vibes',cursive;font-weight:400}
-.caps{font-family:'Cinzel',serif;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem}
+.caps{font-family:'Cinzel',serif;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;font-weight:500}
 .gold{color:var(--gold)}
-.goldtext{background:linear-gradient(100deg,#8a6a2f 0%,#d9b874 35%,#f3e1b0 50%,#c9a35a 65%,#8a6a2f 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.goldtext{background:linear-gradient(100deg,#5e4316 0%,#9a7330 30%,#c9a35a 50%,#8a6a2f 70%,#5e4316 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
 @keyframes shine{to{background-position:200% center}}
 section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 .divider{width:180px;height:24px;margin:22px auto;display:block}
@@ -37,7 +37,7 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 /* ---------- GATE ---------- */
 #gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;pointer-events:auto}
 .door{position:absolute;top:0;bottom:0;width:50%;background:
-  radial-gradient(circle at 50% 45%,#fffaf0,#f1e6d1 70%,#e6d6b6);transition:transform 1.8s cubic-bezier(.7,0,.2,1)}
+  radial-gradient(circle at 50% 45%,#f8efdd,#e8d7b6 70%,#d6c094);transition:transform 1.8s cubic-bezier(.7,0,.2,1)}
 .door.l{left:0;border-right:1px solid rgba(184,145,74,.35)}
 .door.r{right:0;border-left:1px solid rgba(184,145,74,.35)}
 .door::after{content:"";position:absolute;inset:18px;border:1px solid rgba(184,145,74,.35)}
@@ -67,19 +67,19 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 .date-strip{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
 .date-strip .big{font-family:'Cinzel',serif;font-size:2.4rem;color:var(--goldDark);line-height:1}
 .date-strip .side{border-top:1px solid var(--gold2);border-bottom:1px solid var(--gold2);padding:6px 10px}
-.scroll-cue{margin-top:40px;font-size:.8rem;opacity:.7}
+.scroll-cue{margin-top:40px;font-size:.8rem}
 .scroll-cue span{display:block;width:1px;height:46px;margin:10px auto 0;background:linear-gradient(var(--gold),transparent);animation:cue 2s infinite}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* ---------- INVITE ---------- */
-.card{border:1px solid rgba(184,145,74,.45);padding:44px 26px;position:relative;background:rgba(255,255,255,.35)}
+.card{border:1px solid rgba(154,115,48,.6);padding:44px 26px;position:relative;background:rgba(255,250,238,.55)}
 .card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(184,145,74,.25);pointer-events:none}
 .corner{position:absolute;width:54px;height:54px}
 .corner.tl{top:-2px;left:-2px}.corner.tr{top:-2px;right:-2px;transform:scaleX(-1)}
 .corner.bl{bottom:-2px;left:-2px;transform:scaleY(-1)}.corner.br{bottom:-2px;right:-2px;transform:scale(-1)}
 .family{font-family:'Cinzel',serif;font-size:1.05rem;letter-spacing:.08em;color:var(--goldDark);margin:10px 0}
 .groom{font-family:'Cinzel',serif;font-size:1.35rem;letter-spacing:.06em;margin:16px 0 2px}
-.so{font-style:italic;font-size:1rem;opacity:.85}
+.so{font-style:italic;font-size:1.05rem}
 
 /* ---------- COUPLE ---------- */
 .frame{width:250px;height:250px;margin:10px auto 0;position:relative}
@@ -105,7 +105,7 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 .scratch .under .mm{font-family:'Cinzel',serif;letter-spacing:.25em;font-size:.9rem}
 .scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab;transition:opacity 1s}
 .scratch canvas.done{opacity:0;pointer-events:none}
-.small{font-size:.9rem;font-style:italic;opacity:.8}
+.small{font-size:.95rem;font-style:italic}
 
 /* ---------- COUNTDOWN ---------- */
 .lanterns{display:flex;justify-content:space-between;position:absolute;top:0;left:14px;right:14px;pointer-events:none}
@@ -115,7 +115,7 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 @keyframes flick{50%{opacity:.55}}
 #countdown{padding-top:190px}
 .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0 8px}
-.unit{border:1px solid rgba(184,145,74,.45);border-radius:8px;padding:14px 4px;background:rgba(255,255,255,.45)}
+.unit{border:1px solid rgba(154,115,48,.6);border-radius:8px;padding:14px 4px;background:rgba(255,250,238,.6)}
 .unit b{display:block;font-family:'Cinzel',serif;font-weight:500;font-size:1.9rem;color:var(--goldDark);line-height:1.1}
 .unit small{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.18em}
 
@@ -142,7 +142,7 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 #music svg{width:20px;height:20px}
 #music.playing svg{animation:spin 4s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-footer{text-align:center;font-size:.75rem;padding:0 0 30px;opacity:.6}
+footer{text-align:center;font-size:.75rem;padding:0 0 30px}
 @media (max-width:380px){.names{font-size:2.8rem}.timer .unit b{font-size:1.5rem}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -153,7 +153,7 @@ footer{text-align:center;font-size:.75rem;padding:0 0 30px;opacity:.6}
 <svg width="0" height="0" style="position:absolute">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8a6a2f"/><stop offset=".45" stop-color="#e4c789"/><stop offset=".6" stop-color="#f6e7bd"/><stop offset="1" stop-color="#a8823e"/>
+      <stop offset="0" stop-color="#6b4e1c"/><stop offset=".45" stop-color="#b8914a"/><stop offset=".6" stop-color="#d9b874"/><stop offset="1" stop-color="#8a6a2f"/>
     </linearGradient>
     <symbol id="divider" viewBox="0 0 180 24">
       <path d="M0 12 H62 M118 12 H180" stroke="url(#g)" stroke-width="1"/>
