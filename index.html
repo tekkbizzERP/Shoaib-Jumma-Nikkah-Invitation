@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#f7f1e6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --ivory:#f5ecdc; --cream:#eadbbf; --beige:#dcc7a0; --gold:#9a7330; --gold2:#c9a35a; --goldDark:#6b4e1c; --ink:#3a2a12;
@@ -23,7 +23,8 @@ body.locked{overflow:hidden;height:100vh}
   radial-gradient(ellipse at top,rgba(217,184,116,.10),transparent 60%),
   linear-gradient(var(--ivory),var(--cream));box-shadow:0 0 60px rgba(138,106,47,.12)}
 .ar{font-family:'Amiri',serif;direction:rtl}
-.script{font-family:'Great Vibes',cursive;font-weight:400}
+.script{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
+.pf{font-family:'Playfair Display',serif;font-weight:500}
 .caps{font-family:'Cinzel',serif;letter-spacing:.18em;text-transform:uppercase;font-size:.86rem;font-weight:600}
 .gold{color:var(--goldDark)}
 .goldtext{background:linear-gradient(100deg,#4a3410 0%,#7a5a22 30%,#a8823e 50%,#6b4e1c 70%,#4a3410 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
@@ -62,8 +63,11 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 .chandelier{width:250px;transform-origin:50% 0;animation:swing 6s ease-in-out infinite;margin-top:-6px}
 @keyframes swing{0%,100%{transform:rotate(1.4deg)}50%{transform:rotate(-1.4deg)}}
 .bism{font-size:2rem;margin:14px 0 6px;color:var(--goldDark)}
-.names{font-size:3.3rem;line-height:1.15;margin:12px 0}
-.amp{display:block;font-size:2.2rem;margin:4px 0}
+.names{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.85rem,8.2vw,2.45rem);line-height:1.22;margin:14px 0 6px;letter-spacing:.005em}
+.names .n{display:block;text-wrap:balance}
+.hosts,.groom,.host,.quote,.small,.event{text-wrap:balance}
+.amp{display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:1.5rem;margin:8px 0;color:var(--gold);-webkit-text-fill-color:var(--gold)}
+.amp::before,.amp::after{content:"";width:46px;height:1px;background:var(--gold2)}
 .date-strip{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
 .date-strip .big{font-family:'Cinzel',serif;font-size:2.4rem;color:var(--goldDark);line-height:1}
 .date-strip .side{border-top:1px solid var(--gold2);border-bottom:1px solid var(--gold2);padding:6px 10px}
@@ -78,12 +82,12 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 .corner.tl{top:-2px;left:-2px}.corner.tr{top:-2px;right:-2px;transform:scaleX(-1)}
 .corner.bl{bottom:-2px;left:-2px;transform:scaleY(-1)}.corner.br{bottom:-2px;right:-2px;transform:scale(-1)}
 .family{font-family:'Cinzel',serif;font-size:1.05rem;letter-spacing:.08em;color:var(--goldDark);margin:10px 0}
-.groom{font-family:'Cinzel',serif;font-size:1.35rem;letter-spacing:.06em;margin:16px 0 2px}
+.groom{font-family:'Playfair Display',serif;font-weight:500;font-size:1.5rem;line-height:1.3;margin:18px 0 2px}
 .so{font-style:italic;font-size:1.1rem;font-weight:600}
 .quote{font-style:italic;font-size:1.25rem;font-weight:600;color:var(--goldDark)}
-.hosts{font-size:2.2rem;line-height:1.2}
-.event{font-size:2.6rem;line-height:1.2;margin:2px 0}
-.host{font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:.05em;color:var(--ink);margin:4px 0;font-weight:500}
+.hosts{font-family:'Playfair Display',serif;font-style:normal;font-weight:500;font-size:1.45rem;line-height:1.3}
+.event{font-size:1.9rem;line-height:1.25;margin:6px 0 4px}
+.host{font-family:'Playfair Display',serif;font-size:1.22rem;color:var(--ink);margin:6px 0;font-weight:500;line-height:1.35}
 #welcome{padding-top:10px;padding-bottom:90px}
 
 /* ---------- COUPLE ---------- */
@@ -91,16 +95,16 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 .frame .ring{position:absolute;inset:0}
 .frame .inner{position:absolute;inset:26px;border-radius:50%;overflow:hidden;background:radial-gradient(circle,#fffaf0,#efe2c6);display:flex;align-items:center;justify-content:center}
 .frame .inner img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.mono{font-family:'Great Vibes',cursive;font-size:4.6rem;line-height:1}
+
 .arch{width:min(330px,88vw);margin:14px auto 0;padding:9px;border-radius:200px 200px 14px 14px;
   background:linear-gradient(135deg,#8a6a2f,#e4c789 40%,#f6e7bd 55%,#a8823e);box-shadow:0 14px 34px rgba(138,106,47,.25)}
 .arch .in{border-radius:192px 192px 8px 8px;overflow:hidden;padding:5px;background:var(--ivory)}
 .arch img{display:block;width:100%;height:auto;border-radius:187px 187px 5px 5px}
-.pair{display:flex;justify-content:center;align-items:flex-start;gap:18px;margin-top:26px}
-.pair div{flex:1}
-.pair .role{display:block;margin-bottom:4px}
-.pair .nm{font-family:'Great Vibes',cursive;font-size:2.1rem;line-height:1.1;color:var(--goldDark)}
-.heart{color:var(--gold);font-size:1.4rem;margin-top:26px}
+.pair{display:flex;flex-direction:column;align-items:center;gap:4px;margin-top:30px}
+.pair .role{display:block;margin-bottom:4px;font-size:.8rem}
+.pair .nm{font-family:'Playfair Display',serif;font-weight:500;font-size:1.55rem;line-height:1.3;color:var(--goldDark);display:block}
+.heart{color:var(--gold);font-size:1.1rem;margin:10px 0;display:flex;align-items:center;gap:14px}
+.heart::before,.heart::after{content:"";width:46px;height:1px;background:var(--gold2)}
 
 /* ---------- SCRATCH ---------- */
 .scratch{width:270px;height:200px;margin:26px auto 10px;position:relative;border-radius:14px;overflow:hidden;
@@ -145,7 +149,7 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 #closing{padding-bottom:110px}
 .dua{font-size:1.75rem;line-height:2;color:var(--goldDark)}
 .trans{font-style:italic;margin-top:10px}
-.sign{font-family:'Great Vibes',cursive;font-size:2.4rem;color:var(--goldDark);margin-top:6px}
+.sign{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:1.9rem;color:var(--goldDark);margin-top:6px}
 .dots{font-family:'Cinzel',serif;letter-spacing:.3em;font-size:1.1rem;margin:6px 0 20px}
 
 /* ---------- MISC ---------- */
@@ -157,7 +161,7 @@ section{position:relative;padding:80px 30px;text-align:center;overflow:hidden}
 #music.playing svg{animation:spin 4s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark);font-weight:600}
-@media (max-width:380px){.names{font-size:2.8rem}.timer .unit b{font-size:1.5rem}}
+@media (max-width:380px){.timer .unit b{font-size:1.5rem}.groom{font-size:1.35rem}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -265,7 +269,7 @@ footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark)
 
   <p class="bism ar reveal">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
   <p class="caps reveal d1">The Nikkah Ceremony of</p>
-  <h1 class="names script goldtext reveal d2">Muhammad Shoaib Juma<span class="amp">&amp;</span>Zubia Khalid</h1>
+  <h1 class="names goldtext reveal d2"><span class="n">Muhammad Shoaib Juma</span><span class="amp">&amp;</span><span class="n">Zubia Khalid</span></h1>
   <svg class="divider reveal d3"><use href="#divider"/></svg>
   <div class="date-strip reveal d3">
     <span class="caps side">Friday</span>
@@ -287,7 +291,7 @@ footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark)
     <p class="quote">Marriages are settled in heaven, but celebrated on earth.</p>
     <p class="small" style="margin-top:8px">Ya Allah! Guide this couple to the best of Understanding, Happiness, Prosperity, Success and Long Life <span style="white-space:nowrap">(Aameen)</span></p>
     <svg class="divider"><use href="#divider"/></svg>
-    <p class="hosts script goldtext">Mr. &amp; Mrs. Muhammad Junaid Juma</p>
+    <p class="hosts goldtext">Mr. &amp; Mrs. Muhammad Junaid Juma</p>
     <p class="so">S/o. Abdul Kareem (Abba Juma)</p>
     <p style="margin-top:14px">would be honoured by your gracious presence to share the joy of celebrating at the</p>
     <p class="event script goldtext">Nikkah Ceremony</p>
@@ -307,7 +311,7 @@ footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark)
   </div>
   <div class="pair reveal d2">
     <div><span class="caps role gold">The Groom</span><span class="nm">Muhammad Shoaib Juma</span></div>
-    <div class="heart">&#10086;</div>
+    <div class="heart">&amp;</div>
     <div><span class="caps role gold">The Bride</span><span class="nm">Zubia Khalid</span></div>
   </div>
 </section>
@@ -350,7 +354,7 @@ footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark)
     <div class="unit"><b id="mi">--</b><small>Minutes</small></div>
     <div class="unit"><b id="ss">--</b><small>Seconds</small></div>
   </div>
-  <p class="script goldtext reveal d2" style="font-size:2.2rem" id="untilText">Until the blessed beginning</p>
+  <p class="script goldtext reveal d2" style="font-size:1.6rem;margin-top:6px" id="untilText">Until the blessed beginning</p>
 </section>
 
 <!-- ================= VENUE ================= -->
@@ -390,7 +394,7 @@ footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark)
   <p class="dua ar reveal d1">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
   <p class="trans reveal d2">May Allah bless this union, shower His mercy upon the couple, and unite them in goodness.</p>
   <svg class="divider reveal d2"><use href="#divider"/></svg>
-  <h2 class="names script goldtext reveal d3" style="font-size:2.6rem">Shoaib &amp; Zubia</h2>
+  <h2 class="names goldtext reveal d3" style="font-size:2rem">Shoaib <span style="font-style:italic;font-weight:400">&amp;</span> Zubia</h2>
   <p class="dots reveal d3">08 • 01 • 2027</p>
   <p class="caps reveal d4">We look forward to seeing you</p>
 </section>
@@ -400,7 +404,7 @@ footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark)
   <div class="card reveal">
     <svg class="corner tl"><use href="#corner"/></svg><svg class="corner tr"><use href="#corner"/></svg>
     <svg class="corner bl"><use href="#corner"/></svg><svg class="corner br"><use href="#corner"/></svg>
-    <p class="sign" style="margin-top:0">Awaiting to welcome</p>
+    <p class="sign" style="margin-top:0">Awaiting to Welcome</p>
     <svg class="divider"><use href="#divider"/></svg>
     <p class="host">Muhammad Siddiq Juma</p>
     <p class="host">Dr. Muhammad Waqas Lakhani</p>
@@ -415,8 +419,8 @@ footer{text-align:center;font-size:.85rem;padding:0 0 30px;color:var(--goldDark)
 
 <script>
 /* ======= EDIT HERE IF NEEDED ======= */
-// Nikah date & time (Pakistan time). Maghrib in Karachi on 8 Jan is around 6:00 PM — timer counts to 6:15 PM.
-const EVENT = new Date('2027-01-08T18:15:00+05:00');
+// Nikah date & time (Pakistan time). Isha in Karachi on 8 Jan is around 7:20 PM — timer counts to 7:30 PM.
+const EVENT = new Date('2027-01-08T19:30:00+05:00');
 /* =================================== */
 
 const $ = s => document.querySelector(s);
